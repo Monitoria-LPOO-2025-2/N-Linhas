@@ -98,7 +98,7 @@ public static void main(String[] args) {
 }
 ```
 
-### ✅ Teste Automatizado (Correção)
+### Teste Automatizado (Correção)
 
 O projeto está configurado com **Gradle**.  
 Para rodar os testes automatizados, execute o seguinte comando no terminal (na raiz do projeto):

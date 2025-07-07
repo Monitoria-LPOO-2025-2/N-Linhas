@@ -24,3 +24,8 @@ hs_err_pid*
 replay_pid*
 .github/instructions/
 .github/prompts/
+
+build
+.idea
+.gradle
+gradle

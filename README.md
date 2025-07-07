@@ -1,5 +1,3 @@
-Markdown
-
 # Atividade N-Linhas
 
 ## Visão Geral do Projeto
@@ -24,32 +22,33 @@ O padrão que você precisa criar funciona da seguinte maneira: para um dado nú
 
 O projeto já vem com alguns arquivos para te ajudar. É importante que você se familiarize com eles:
 
+```text
 src
 ├── main
 │   ├── java
 │   │   ├── solution
-│   │   │   ├── NLinhas.java  <-- Local de trabalho
+│   │   │   ├── NLinhas.java  <-- 🎯 É AQUI QUE VOCÊ VAI TRABALHAR!
 │   │   │   └── Main.java     <-- Use este para testes manuais.
 └── test
-└── java
-└── solution
-└── TestNLinhas.java <-- Testes automáticos (não modifique!).
+    └── java
+        └── solution
+            └── TestNLinhas.java <-- Testes automáticos (não modifique!).
+NLinhas.java: Contém a classe NLinhas com o método gerarLinhas(int n) que você precisa implementar.
 
+Main.java: Uma classe com um método main onde você pode escrever seu próprio código para testar a sua implementação manualmente. O código aqui não será avaliado.
 
--   **`NLinhas.java`**: Contém a classe `NLinhas` com o método `gerarLinhas(int n)` que você precisa implementar.
--   **`Main.java`**: Uma classe com um método `main` onde você pode escrever seu próprio código para testar a sua implementação manualmente. O código aqui não será avaliado.
--   **`TestNLinhas.java`**: Contém os testes automatizados que serão usados para corrigir sua atividade. Você pode (e deve!) olhar este arquivo para entender todos os casos que sua solução precisa atender.
+TestNLinhas.java: Contém os testes automatizados que serão usados para corrigir sua atividade. Você pode (e deve!) olhar este arquivo para entender todos os casos que sua solução precisa atender.
 
-## Sua Tarefa
+Sua Tarefa
+Sua única tarefa é implementar a lógica dentro do método gerarLinhas(int n) no arquivo NLinhas.java.
 
-Sua única tarefa é implementar a lógica dentro do método `gerarLinhas(int n)` no arquivo `NLinhas.java`.
+O método recebe um inteiro n e deve retornar uma String com o padrão completo. Lembre-se que cada linha no padrão final deve ser separada por um caractere de nova linha (\n).
 
-O método recebe um inteiro `n` e deve retornar uma `String` com o padrão completo. Lembre-se que cada linha no padrão final deve ser separada por um caractere de nova linha (`\n`).
+Java
 
-```java
 public String gerarLinhas(int n) {
     // Implemente toda a sua lógica aqui.
-    // DICA: Verifique se n < 0. Se for, retorne "".
+    // DICA: Verifique se n <= 0. Se for, retorne "".
     // DICA: Use laços (loops) para construir a string linha por linha.
     // DICA: Retorne a variável que guarda a string final.
 

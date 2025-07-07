@@ -1,6 +1,6 @@
-# Atividade N-Linhas
+# N-Linhas
 
-O objetivo é simples: você precisa completar um método em Java que gera um padrão numérico com base em um número inteiro `n`.
+Você precisa construir um método em Java que gera um padrão numérico com base em um número inteiro `n`.
 
 ---
 

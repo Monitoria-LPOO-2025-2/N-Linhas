@@ -75,16 +75,16 @@ public String gerarLinhas(int n) {
 
 Para que sua solução seja considerada correta, ela deve:
 
-✅ Gerar o padrão correto para qualquer valor de `n` positivo.  
-✅ Lidar com o caso `n = 0`: o método deve retornar uma string vazia (`""`).  
-✅ Lidar com números negativos: o comportamento deve ser o mesmo que para `n = 0`.  
-✅ Não alterar os nomes das classes, métodos ou estrutura dos arquivos.  
+ Gerar o padrão correto para qualquer valor de `n` positivo.  
+ Lidar com o caso `n = 0`: o método deve retornar uma string vazia (`""`).  
+ Lidar com números negativos: o comportamento deve ser o mesmo que para `n = 0`.  
+ Não alterar os nomes das classes, métodos ou estrutura dos arquivos.  
 
 ---
 
 ## Como Testar seu Código
 
-### ✅ Teste Manual
+###  Teste Manual
 
 Você pode usar o arquivo `Main.java` para fazer testes rápidos:
 

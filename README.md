@@ -1,49 +1,89 @@
+Markdown
+
 # Atividade N-Linhas
 
-## Descrição da Atividade
+## Visão Geral do Projeto
 
-Esta é uma atividade de autograding para implementar um gerador de padrões em Java. Sua tarefa é completar a implementação do método `gerar(int n)` na classe `GeradorLinhas` para que ele produza um padrão numérico específico.
+Bem-vindo à atividade "N-Linhas"! Este é um pequeno projeto em Java projetado para praticar seus conhecimentos de lógica de programação, especialmente o uso de laços de repetição (loops) e manipulação de strings.
 
-### O Padrão Numérico
+O objetivo é simples: você precisa completar um método em Java que gera um padrão numérico com base em um número inteiro `n`.
 
-O padrão é definido da seguinte forma: para um `n`, são geradas `n` linhas. A linha `i` contém o número `i` repetido `i` vezes.
+## O Desafio
 
-- Para n = 4, a saída deve ser:
+O padrão que você precisa criar funciona da seguinte maneira: para um dado número `n`, seu programa deve gerar `n` linhas de texto. Cada linha `i` (de 1 a `n`) deve conter o número `i` repetido `i` vezes.
+
+**Por exemplo, se `n = 4`, a saída esperada é:**
 
 1
 22
 333
 4444
 
-### Requisitos
 
-Sua implementação deve:
+## Estrutura do Projeto
 
-1.  **Gerar o padrão correto** para os casos de teste, incluindo `n=0`, `n=1`, `n=4` e `n=5`.
-2.  **Lidar com casos de borda**:
-    - Funcionar corretamente para o caso base `n=0` (retornando uma string vazia).
-    - Lidar com números negativos, tratando-os como se fossem `n=0` (retornando uma string vazia).
-3.  **Seguir a estrutura de código existente**:
-    - Implementar o método de instância `gerar(int n)` na classe `GeradorLinhas`.
-    - Não modificar os arquivos de teste ou o construtor.
-    - A classe `Main` pode ser usada para demonstrar sua implementação.
+O projeto já vem com alguns arquivos para te ajudar. É importante que você se familiarize com eles:
 
-### Requisitos do Sistema
+src
+├── main
+│   ├── java
+│   │   ├── solution
+│   │   │   ├── NLinhas.java  <-- Local de trabalho
+│   │   │   └── Main.java     <-- Use este para testes manuais.
+└── test
+└── java
+└── solution
+└── TestNLinhas.java <-- Testes automáticos (não modifique!).
 
-- Java 8 ou superior
-- Gradle (wrapper incluído)
 
-### Dependências
+-   **`NLinhas.java`**: Contém a classe `NLinhas` com o método `gerarLinhas(int n)` que você precisa implementar.
+-   **`Main.java`**: Uma classe com um método `main` onde você pode escrever seu próprio código para testar a sua implementação manualmente. O código aqui não será avaliado.
+-   **`TestNLinhas.java`**: Contém os testes automatizados que serão usados para corrigir sua atividade. Você pode (e deve!) olhar este arquivo para entender todos os casos que sua solução precisa atender.
 
-- JUnit Jupiter (para testes)
+## Sua Tarefa
 
-### Estrutura do Projeto
+Sua única tarefa é implementar a lógica dentro do método `gerarLinhas(int n)` no arquivo `NLinhas.java`.
 
-```text
-src/
-├── main/java/solution/
-│   ├── GeradorLinhas.java      # Sua implementação vai aqui
-│   └── Main.java               # Usado para testes manuais
-└── test/java/solution/
-    └── TestGeradorLinhas.java  # Casos de teste (não modificar)
+O método recebe um inteiro `n` e deve retornar uma `String` com o padrão completo. Lembre-se que cada linha no padrão final deve ser separada por um caractere de nova linha (`\n`).
 
+```java
+public String gerarLinhas(int n) {
+    // Implemente toda a sua lógica aqui.
+    // DICA: Verifique se n < 0. Se for, retorne "".
+    // DICA: Use laços (loops) para construir a string linha por linha.
+    // DICA: Retorne a variável que guarda a string final.
+
+    return ""; // Substitua isso pela sua implementação
+}
+Requisitos
+Para que sua solução seja considerada correta, ela deve:
+
+Gerar o padrão correto para qualquer valor de n positivo.
+
+Lidar com o caso n = 0: Se n for 0, o método deve retornar uma string vazia ("").
+
+Lidar com números negativos: Se n for um número negativo, o comportamento deve ser o mesmo que para n = 0, retornando uma string vazia.
+
+Seguir a estrutura de código existente: Não altere os nomes dos métodos, classes ou a estrutura dos arquivos.
+
+Como Testar seu Código
+Teste Manual
+Você pode usar o arquivo Main.java para fazer testes rápidos. Descomente o código dentro do método main para ver a saída do seu método gerarLinhas no console:
+
+Java
+
+public static void main(String[] args) {
+    // Teste seu código aqui
+    NLinhas gerador = new NLinhas();
+    int numeroDeLinhas = 5;
+    String resultado = gerador.gerarLinhas(numeroDeLinhas);
+    System.out.println("Teste para n = " + numeroDeLinhas);
+    System.out.print(resultado);
+}
+Teste Automatizado (Correção)
+O projeto está configurado com Gradle. Para rodar os testes automatizados e verificar se sua solução está correta, execute o seguinte comando no terminal, na raiz do projeto:
+
+Bash
+
+./gradlew test
+Se todos os testes passarem, você verá uma mensagem de "BUILD SUCCESSFUL". Caso contrário, um relatório de testes será gerado na pasta build/reports/tests/test/index.html, indicando quais casos falharam.
